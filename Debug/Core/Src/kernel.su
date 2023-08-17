@@ -1,0 +1,9 @@
+../Core/Src/kernel.c:11:6:SVC_Handler_Main	24	static,ignoring_inline_asm
+../Core/Src/kernel.c:46:12:checkif_stack_available	16	static
+../Core/Src/kernel.c:62:5:find_lowestDeadline	24	static
+../Core/Src/kernel.c:77:6:os_kernel_initialize	4	static
+../Core/Src/kernel.c:90:10:os_createthread	24	static
+../Core/Src/kernel.c:130:10:os_createthreadWithDeadline	32	static
+../Core/Src/kernel.c:169:6:os_kernel_start	8	static,ignoring_inline_asm
+../Core/Src/kernel.c:175:6:osSched	16	static,ignoring_inline_asm
+../Core/Src/kernel.c:184:6:osYield	4	static,ignoring_inline_asm

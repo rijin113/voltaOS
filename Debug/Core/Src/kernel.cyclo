@@ -1,0 +1,9 @@
+kernel.c:11:6:SVC_Handler_Main	6
+kernel.c:46:12:checkif_stack_available	2
+kernel.c:62:5:find_lowestDeadline	3
+kernel.c:77:6:os_kernel_initialize	1
+kernel.c:90:10:os_createthread	4
+kernel.c:130:10:os_createthreadWithDeadline	4
+kernel.c:169:6:os_kernel_start	1
+kernel.c:175:6:osSched	1
+kernel.c:184:6:osYield	1
