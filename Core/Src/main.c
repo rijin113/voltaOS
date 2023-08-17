@@ -118,15 +118,6 @@ void print_thread2(void *args)
 	}
 }
 
-//void print_interesting_val(void *args)
-//{
-//	uint32_t value = *(uint32_t*)args;
-//	while(1)
-//	{
-//		printf("Value %u \r \n", value);
-//	}
-//}
-
 void thread1_multitasking(void *args)
 {
 	while(1)
@@ -222,22 +213,11 @@ int main(void)
   user_input.var1 = 5;
   user_input.var2 = 6;
 
-//  os_kernel_initialize();
-//  os_createthread(thread1_multitasking, &user_value);
-//  os_createthreadWithDeadline(thread2_multitasking, &user_input, 200, 10);
-//  os_kernel_start();
-
-//  os_createthread(print_thread1);
-//  os_createthread(print_thread2);
-
-// NEW LAB 5 IMPLEMENTATION
   os_kernel_initialize();
   os_createthreadWithDeadline(thread1_EDF_test, &user_value, 20, 70);
   os_createthreadWithDeadline(thread2_EDF_test, &user_input, 40, 120);
   os_createthreadWithDeadline(thread3_EDF_test, &user_input, 50, 100);
   os_kernel_start();
-
-//  os_createthread(print_interesting_val, &user_value);
 
   /* USER CODE END 2 */
 
