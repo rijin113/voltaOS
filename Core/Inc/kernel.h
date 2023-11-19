@@ -24,8 +24,6 @@ int find_lowestDeadline();
 
 void SVC_Handler_Main( unsigned int *svc_args );
 
-//void set_thread_stack( uint32_t *thread_stack_ptr, void (*function)(void *args));
-
 void os_kernel_initialize(void);
 
 uint32_t os_createthread(void (*function)(void *args), void *args);
