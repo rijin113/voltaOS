@@ -52,9 +52,6 @@ UART_HandleTypeDef huart2;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 
@@ -73,34 +70,7 @@ typedef struct a_data{
 
 int thread1_change;
 
-void jumpAssembly(void* fcn)
-{
-	__asm("MOV PC, R0");
-}
-
-void print_firstname(void)
-{
-	__asm("SVC #5");
-}
-
-void print_lastname(void)
-{
-	__asm("SVC #6");
-}
-
-void print_success(void)
-{
-	__asm("SVC #7");
-}
-
-void print_continuously(void *args)
-{
-	while(1)
-	{
-		printf("Hello, PC!");
-	}
-}
-
+/* Testing Co-operative multitasking */
 void print_thread1(void *args)
 {
 	while (1)
@@ -119,6 +89,7 @@ void print_thread2(void *args)
 	}
 }
 
+/* Testing Pre-emptive multitasking */
 void thread1_multitasking(void *args)
 {
 	while(1)
@@ -139,6 +110,7 @@ void thread2_multitasking(void *args)
 	}
 }
 
+/* Testing EDF (Earliest Deadline First) scheduling */
 void thread1_EDF_test(void *args)
 {
 	while(1)

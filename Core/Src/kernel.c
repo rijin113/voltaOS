@@ -21,15 +21,6 @@ void SVC_Handler_Main( unsigned int *svc_args )
 	svc_number = ( ( char * )svc_args[ 6 ] )[ -2 ] ;
 	switch( svc_number )
 	{
-		case 5:
-			printf("First name: Rijin! \r\n");
-			break;
-		case 6:
-			printf("Last name: Muralidharan! \r\n");
-			break;
-		case 7:
-			printf("Success!\r\n");
-			break;
 		case RUN_FIRST_THREAD:
 			__set_PSP((uint32_t)tcb_array[thread_index].sp);
 			runFirstThread();
